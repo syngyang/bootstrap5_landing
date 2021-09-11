@@ -1,0 +1,35 @@
+// custom variable values
+$primary: #c29938;
+$light: #fbf5e5;
+
+// import the functions & variables
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+// custom theme colours
+$custom-theme-colors: (
+  "altlight": #f2ebfa,
+  "altdark": #522192
+);
+
+// merge the maps to add new theme colors
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+// // import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
+
+// custom map 만들려면, 개별변수 밑에 다가 한다
+// 1. 아래 두줄을 불러오고
+// @import "../node_modules/bootstrap/scss/_functions";
+// @import "../node_modules/bootstrap/scss/_variables";
+
+// 2. 아래 커스텀 맵을 만들고
+// $custom-theme-colors: (
+//     "altlight": #f2ebfa,
+//     "altdark": #522192
+// );
+
+// 3. map-merge()함수를 이용해서 합칩서 original 변수에 반영를 함
+// $theme-colors: map-merge($custom-theme-colors, $theme-color);
